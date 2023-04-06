@@ -5,38 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      td {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
   </head>
-  <style>
-
-    th,
-    td {
-      border: 1px solid red;
-    }
-  </style>
   <body>
-    <table>
+    <h1>1</h1>
+    <table border="1">
       <tr>
-        <th>No.</th>
-        <th>Semester</th>
-        <th>Grade</th>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
       </tr>
-
       <tr>
-        <td>1</td>
-        <td>Jan - April</td>
-        <td>Credit</td>
+        <td colspan="3">A</td>
       </tr>
-
       <tr>
-        <td>2</td>
-        <td>May - August</td>
-        <td>Pass</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
       </tr>
-
+    </table>
+    <h1>2</h1>
+    <table border="1">
       <tr>
-        <td>2</td>
-        <td>September - December</td>
-        <td>Distinction</td>
+        <td rowspan="3">A</td>
+        <td>B</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>E</td>
+      </tr>
+      <tr>
+        <td>G</td>
+        <td>H</td>
+      </tr>
+    </table>
+    <h1>3</h1>
+    <table border="1">
+      <tr>
+        <td rowspan="2">A</td>
+        <td rowspan="3">B</td>
+        <td>C</td>
+      </tr>
+      <tr>
+        <td>D</td>
+      </tr>
+      <tr>
+        <td>G</td>
+
+        <td>I</td>
+      </tr>
+    </table>
+    <h1>4</h1>
+    <table border="1">
+      <tr>
+        <td colspan="4" >A</td>
+     
+        <td rowspan="2" >C</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>F</td>
+
       </tr>
     </table>
   </body>
