@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+header {
+  height: 80px;
+}
+nav {
+  width: 100%;
+  height: 92px;
+  background: rgb(14, 11, 11);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 50px 0px 100px;
+}
+nav .logo {
+  font-size: 33px;
+  color: #fff;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 50px;
+  color: #dfd3d3;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: rgb(235, 220, 220);
+  color: black;
+}
+nav .menu-btn i {
+  display: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+#click {
+  display: none;
+}
+.body {
+  height: 2500px;
+  width: 100%;
+}
+@media (max-width: 940px) {
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    position:absolute;
+  }
+  #click:checked ~ ul {
+    left: 0%;
+  }
+  nav ul li {
+    margin: 40px 0;
+  }
+  nav .menu-btn i {
+    display: block;
+  }
+  nav ul li a {
+    font-size: 20px;
+    display: block;
+  }
+  nav ul li a:hover,
+  nav ul li a.active {
+    color: cyan;
+    background: none;
+  }
+}

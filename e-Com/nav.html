@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="./nav.css" />
+    <link rel="stylesheet" href="./slide.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <input type="checkbox" id="click" />
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><a class="active" href="">HOME</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">SERVICES</a></li>
+          <li><a href="">GALLERY</a></li>
+          <li><a href="">FEEDBACK</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="slide slide-img" >
+        <div class="text-area">
+          <h2>Get the topic</h2>
+        <button>Read more...</button>
+        </div>
+      </div>
+      <img src="https://picsum.photos/id/2/1000/500" alt="" class="slide" />
+      <img src="https://picsum.photos/id/3/1000/500" alt="" class="slide" />
+      <img src="https://picsum.photos/id/4/1000/500" alt="" class="slide" />
+      <img src="https://picsum.photos/id/5/1000/500" alt="" class="slide" />
+      <img src="https://picsum.photos/id/6/1000/500" alt="" class="slide" />
+      <img src="https://picsum.photos/id/7/1000/500" alt="" class="slide" />
+    </main>
+    <div class="nav">
+      <button onclick="goPrev()">Prev</button>
+      <button onclick="goNext()">Next</button>
+    </div>
+    <script>
+      const slides = document.querySelectorAll(".slide");
+      var counter = 0;
+      slides.forEach((slide, index) => {
+        slide.style.left = `${index * 100}%`;
+      });
+      const goNext = () => {
+        if (counter < slides.length - 1) {
+          counter++;
+        } else {
+         return counter 
+        }
+        slideImage();
+      };
+      const goPrev = () => {
+        if (counter > 0) {
+          counter--;
+        }
+
+        slideImage();
+      };
+      const slideImage = () => {
+        slides.forEach((slide) => {
+          slide.style.transform = `translateX(-${counter * 100}%)`;
+        });
+      };
+    </script>
+  </body>
+</html>
