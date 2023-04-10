@@ -58,7 +58,7 @@ nav .menu-btn i {
 }
 @media (max-width: 940px) {
   nav ul {
-    position: fixed;
+    position: absolute;
     top: 80px;
     left: -100%;
     background: #111;
@@ -67,7 +67,6 @@ nav .menu-btn i {
     display: block;
     text-align: center;
     transition: all 0.3s ease;
-    position:absolute;
   }
   #click:checked ~ ul {
     left: 0%;

@@ -59,6 +59,7 @@ body {
     position: absolute;
     right: 0px;
     top: 0px;
+    
   }
   .nav > .nav-btn > label {
     display: inline-block;
@@ -99,6 +100,4 @@ body {
     overflow-y: auto;
   }
 }
-#myCarousel {
-  display: block;
-}
+
