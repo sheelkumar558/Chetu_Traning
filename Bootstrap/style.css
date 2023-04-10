@@ -1,0 +1,18 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container {
+  border: 1px solid red;
+}
+.row {
+  justify-content: center;
+}
+.column {
+  width: 270px;
+  margin: 5px 5px;
+}
+.column img {
+  width: 265px;
+}
