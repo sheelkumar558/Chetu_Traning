@@ -28,10 +28,10 @@
       </nav>
     </header>
     <main>
-      <div class="slide slide-img" >
+      <div class="slide slide-img">
         <div class="text-area">
           <h2>Get the topic</h2>
-        <button>Read more...</button>
+          <button>Read more...</button>
         </div>
       </div>
       <img src="https://picsum.photos/id/2/1000/500" alt="" class="slide" />
@@ -45,6 +45,16 @@
       <button onclick="goPrev()">Prev</button>
       <button onclick="goNext()">Next</button>
     </div>
+    <div class="cards">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
     <script>
       const slides = document.querySelectorAll(".slide");
       var counter = 0;
@@ -55,7 +65,7 @@
         if (counter < slides.length - 1) {
           counter++;
         } else {
-         return counter 
+          return (counter = 0);
         }
         slideImage();
       };

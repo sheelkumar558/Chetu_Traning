@@ -9,7 +9,7 @@ main {
   width: 96%;
   height: 500px;
   margin: auto;
-
+  margin-top: 13px;
   position: relative;
   overflow: hidden;
 }
@@ -44,4 +44,22 @@ main {
 .nav button {
   font-size: 25px;
   padding: 5px;
+  margin: auto;
+  justify-content: center;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.card {
+  flex: 1 0 20%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  border: 1px solid red;
+  width: 230px;
+  height: 250px;
 }
