@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <a class="navbar-brand" href="#">Home</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-4">
+          <li class="nav-item">
+            <a class="nav-link" data-value="about" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-value="portfolio" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-value="blog" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-value="team" href="#"> Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-value="contact" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="description">
+          <h1>
+            Hello ,Welcome To My official Website
+            <p>
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+            <button class="btn btn-outline-secondary btn-lg">See more</button>
+          </h1>
+        </div>
+      </div>
+    </header>
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <img
+          src="https://images.unsplash.com/photo-1661956600684-97d3a4320e45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+          class="img-fluid"
+        />
+        <span class="text-justify">S.Web Developer</span>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-12 desc">
+        <h3>D.John</h3>
+        <p>
+          ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  $(document).ready(function () {
+    $(".header").height($(window).height());
+  });
+</script>
