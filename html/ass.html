@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Form to add a new contact -->
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="mobile">Mobile Number:</label>
+      <input type="text" id="mobile" name="mobile" /><br /><br />
+      <button type="button" onclick="addContact()">Add Contact</button>
+    </form>
+
+    <!-- Search form -->
+    <input
+      type="text"
+      id="nameFilter"
+      placeholder="Filter by Name"
+    /><br /><br />
+    <input
+      type="text"
+      id="mobileNumberFilter"
+      placeholder="Filter by Mobile Number"
+    /><br /><br />
+
+    <!-- Table to display contacts -->
+    <table id="contacts">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Mobile Number</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+</html>
+<script>
+  // Array to store contacts
+  let contacts = [];
+
+  // Function to add a new contact
+  function addContact() {
+    const name = document.getElementById("name").value;
+    const mobile = document.getElementById("mobile").value;
+
+    // Check if mobile number already exists
+    const exists = contacts.some((contact) => contact.mobile === mobile);
+    if (exists) {
+      alert("Mobile number already exists!");
+      return;
+    }
+
+    // Add new contact to array
+    const contact = { name, mobile };
+    contacts.push(contact);
+
+    // Clear input fields
+    document.getElementById("name").value = "";
+    document.getElementById("mobile").value = "";
+
+    // Display contacts
+    displayContacts();
+  }
+  var nameFilterInput = document.getElementById("nameFilter");
+  var mobileNumberFilterInput = document.getElementById("mobileNumberFilter");
+
+  // Add input event listeners to filter inputs
+  nameFilterInput.addEventListener("input", refreshContactList);
+  mobileNumberFilterInput.addEventListener("input", refreshContactList);
+
+  // Function to display all contacts in ascending order of name
+  function displayContacts() {
+    // Sort contacts array by name
+    contacts.sort((a, b) => a.name.localeCompare(b.name));
+
+    // Get table body element
+    const tbody = document.querySelector("#contacts tbody");
+
+    // Clear table body
+    tbody.innerHTML = "";
+
+    // Loop through contacts and add rows to table
+    contacts.forEach((contact, index) => {
+      const tr = document.createElement("tr");
+
+      const tdName = document.createElement("td");
+      tdName.textContent = contact.name;
+
+      const tdMobile = document.createElement("td");
+      tdMobile.textContent = contact.mobile;
+
+      const tdAction = document.createElement("td");
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.onclick = () => deleteContact(index);
+      tdAction.appendChild(deleteBtn);
+
+      const editBtn = document.createElement("button");
+      editBtn.textContent = "Edit";
+      editBtn.onclick = () => editContact(index);
+      tdAction.appendChild(editBtn);
+
+      tr.appendChild(tdName);
+      tr.appendChild(tdMobile);
+      tr.appendChild(tdAction);
+
+      tbody.appendChild(tr);
+    });
+  }
+
+  // Function to delete a contact
+  function deleteContact(index) {
+    contacts.splice(index, 1);
+    displayContacts();
+  }
+
+  // Function to edit a contact
+  let editIndex = -1;
+
+  function editContact(index) {
+    const contact = contacts[index];
+    document.getElementById("name").value = contact.name;
+    document.getElementById("mobile").value = contact.mobile;
+    editIndex = index;
+  }
+
+  function updateContact() {
+    const name = document.getElementById("name").value;
+  }
+</script>
