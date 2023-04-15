@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cont">
+      <p>paragraph 1</p>
+      <p>paragraph 2</p>
+      <button>btn 1</button>
+      <button>btn 2</button>
+      <button>btn 3</button>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </body>
+</html>
+<script>
+  //   $("button").click(function () {
+  //     $(this).hide(); //- hides the current element.
+  //   });
+  //   $("button").click(function () {
+  //     $("p").hide();
+  //   });
+
+  //   Mouse Events	Keyboard Events	Form Events	Document/Window Events
+  // click	keypress	submit	load
+  // dblclick	keydown	change	resize
+  // mouseenter	keyup	focus	scroll
+  // mouseleave	 	blur	unload
+  //   Attach multiple event handlers to a <p> element:
+
+  //sExample
+  // $("button").on({
+  //   mouseenter: function(){
+  //     $(this).css("background-color", "lightgray");
+  //   },
+  //   mouseleave: function(){
+  //     $(this).css("background-color", "lightblue");
+  //   },
+  //   click: function(){
+  //     $(this).css("background-color", "yellow");
+  //   }
+  // });
+
+  /* 
+  $(selector).hide(speed,callback);
+  $(selector).show(speed,callback);
+  $(selector).toggle(speed,callback);
+  fadeIn()
+fadeOut()
+fadeToggle()
+fadeTo()
+$(selector).fadeIn(speed,callback);
+$(selector).fadeToggle(speed,callback);
+
+$(selector).slideDown(speed,callback); speed "slow" and "fast"
+$(selector).slideUp(speed,callback);
+$(selector).slideToggle(speed,callback);
+The jQuery animate() method is used to create custom animations.
+$(selector).animate({params},speed,callback);
+$("button").click(function(){
+  $("div").animate({
+    left: '250px',
+    height: '+=150px',
+    width: '+=150px'
+  });
+}); 
+You can even specify a property's animation value as "show", "hide", or "toggle":
+
+Example
+$("button").click(function(){
+  $("div").animate({
+    height: 'toggle'
+  });
+}); 
+$(selector).stop(stopAll,goToEnd);
+$("#stop").click(function(){
+  $("#panel").stop();
+});
+The example below has a callback parameter that is a function that will be executed after the hide effect is completed:
+
+Example with Callback
+$("button").click(function(){
+  $("p").hide("slow", function(){
+    alert("The paragraph is now hidden");
+  });
+});
+
+With jQuery, you can chain together actions/methods.
+Chaining allows us to run multiple jQuery methods (on the same element) within a single statement.
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#p1").css("color", "red")
+      .slideUp(2000)
+      .slideDown(2000);
+  });
+});
+
+
+
+*/
+</script>
