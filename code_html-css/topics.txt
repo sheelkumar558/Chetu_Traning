@@ -1,0 +1,28 @@
+1. meta tags
+2. semantic tags
+3. speicifity
+4. differnece between margin and padding
+5. diffent units of CSS
+    - px
+    - percentage
+    - rem
+    - em 
+    - fr
+    - vh
+    - vw
+6. CSS variables
+7. formatting tags
+    - b
+    - i
+    - u
+    - strong
+    - mark
+8. some new input tags of hmtl5
+    - time
+    - email 
+    - tel
+    - color
+    - range
+    - date
+9. differnce between span and div
+10. inline v/s block v/s inline-block

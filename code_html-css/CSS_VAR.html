@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      :root {
+        --bg-color: teal;
+        --color: pink;
+      }
+      :root {
+        --varidnciad: 7px;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+      }
+      body {
+        display: flex;
+        justify-content: space-between;
+      }
+      .red {
+        background-color: var(--bg-color);
+      }
+      .blue {
+        background-color: blue;
+      }
+      p {
+        color: var(--bg-color);
+      }
+      h1 {
+        border: var(--bg-color) 1px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="red"></div>
+    <div class="red"></div>
+    <div class="red blue"></div>
+
+    <p>abcd</p>
+
+    <h1>heading</h1>
+  </body>
+</html>

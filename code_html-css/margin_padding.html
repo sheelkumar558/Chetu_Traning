@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Margin Padding</title>
+    <style>
+      body > h1:nth-child(1) {
+        /* go inside body look for all h1 children and select the first h1 child */
+        padding: 30px;
+      }
+      h1 {
+        border: 1px solid black;
+      }
+      /* h1~p{
+        search for all h1 tags and select their siblings if they are p
+      } */
+      h1 ~ h1 {
+        margin: 50px;
+      }
+
+      /* h1+h1{
+
+      } */
+    </style>
+  </head>
+  <body>
+    <h1>First</h1>
+    <h1>Second</h1>
+    <p>First p</p>
+    <p>second p</p>
+  </body>
+</html>
+
+<!-- 
+    box-model:
+    every html element is considered as a box when it gets rendered.
+    box-model => margin>border>padding>content(height/width)
+
+    margin:
+    it's the space between two html elements
+    padding:
+    it's the space between border and content of an element
+    
+    combinators:
+    child selector
+    descendant selector
+    general sibling selector
+    adjacent sibling selector
+    n-th child selector
+ -->

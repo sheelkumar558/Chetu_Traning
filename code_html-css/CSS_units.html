@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .viewport {
+        background-color: red;
+        width: 50vw;
+        height: 50vh;
+        margin: auto;
+      }
+      .em-parent {
+        font-size: 30px;
+      }
+      .em-3 {
+        font-size: 3em;
+      }
+      .rem-3 {
+        font-size: 3rem;
+      }
+
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="viewport"></div>
+
+    <div class="em-parent">
+      <h1 class="em-3">I am a em-3 inside the div</h1>
+      <h1 class="rem-3">I am a Heading2</h1>
+    </div>
+    <h1 class="em-3">I am a em-3 inside the body</h1>
+  </body>
+</html>
+
+<!-- vw/vh refers to the view-port or browser window size
+
+% refer to the size of the parent element
+
+the default font-size of p tag = ? 16px 
+em
+2 em 
+2 * 16
+1.5 em 
+1.5 * 16
+this will refer to the default font-size of the parent element. By default the value is 16 but this will change if we give a font-size to the parent element. in this example the em is multiplying with 20px
+
+rem 
+ font size * the value
+ this will refer to the root element instead of parent 
+1.5 rem
+1.5*16
+2rem
+2*16
+
+-->
