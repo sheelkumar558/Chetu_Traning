@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+/* header css style */
+header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px;
+  align-items: center;
+}
+header img {
+  width: 100px;
+}
+header .header-icon .fa {
+  text-decoration: none;
+  font-size: 25px;
+  padding: 0px 10px;
+}
+.search-box {
+  border: 1px solid rgb(75, 61, 61);
+  border-radius: 15px;
+
+  display: flex;
+}
+.search-box input {
+  border: none;
+  padding: 5px;
+  border-radius: 15px;
+  width: 270px;
+  padding: 5px;
+}
+.search-box i a {
+  background-color: rgb(102, 102, 116);
+  padding: 5px;
+  border-radius: 50%;
+  color: black;
+  text-decoration: none;
+}
+
+/* navbar css style */
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: rgb(38, 87, 6);
+  color: white;
+  padding: 25px;
+}
+.nav-logo {
+  display: flex;
+}
+.nav-logo ul {
+  list-style-type: none;
+  display: flex;
+}
+.nav-logo a {
+  padding: 0px 5px;
+}
+ul li {
+  padding: 0 10px;
+}
+ul li a {
+  color: white;
+  text-decoration: none;
+}
+.nav-logo hr {
+  height: 20px;
+  margin: 0px 5px;
+  color: black;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* banner */
+.banner {
+  display: flex;
+  padding: 10px;
+}
+.banner .ban-left {
+  width: 70%;
+  position: relative;
+}
+.banner .ban-left img {
+  width: 98%;
+  border-radius: 5px;
+  margin: 5px;
+  height: 500px;
+  object-fit: cover;
+}
+.banner .ban-right {
+  width: 30%;
+  position: relative;
+}
+.banner .ban-right img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin: 5px;
+}
+.banner .ban-left .ban-1-text {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  line-height: 30px;
+}
+.banner .ban-left .ban-1-text h2 {
+  color: rgb(167, 151, 64);
+}
+.banner .ban-left .ban-1-text button {
+  padding: 5px 20px;
+  background-color: rgb(167, 151, 64);
+  color: white;
+  border: none;
+  border-radius: 50px;
+}
+.banner .ban-right .ban-right-1 {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 30px;
+  color: rgb(109, 102, 102);
+}
+.banner .ban-right .ban-right-2 {
+  position: absolute;
+  top: 310px;
+  left: 60px;
+  line-height: 30px;
+  color: whitesmoke;
+}
+/* benefits */
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+}
+.col {
+  width: 25%;
+  padding: 10px;
+}
+.col .card {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  width: 80%;
+}
+.card h3,
+.card-p {
+  color: rgb(121, 202, 161);
+}
+
+/* featured products */
+.featured {
+  display: flex;
+  justify-content: space-between;
+  margin: 2px 10px;
+  align-items: center;
+}
+.featured .feat {
+  line-height: 70px;
+}
+
+.featured .feat hr {
+  width: 200px;
+  background: red;
+  padding: 1px;
+  border: none;
+}
+.featured a {
+  padding: 2px 10px;
+  background-color: red;
+  color: antiquewhite;
+}
+.product {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product .products {
+  width: 25%;
+  padding: 10px;
+  line-height: 25px;
+}
+.product .products .prod-card {
+  text-align: center;
+}
+
+.product .products .prod-card img {
+  width: 200px;
+}
+.product .products .prod-card h4 {
+  text-decoration: underline;
+}
+.product .products .prod-card button {
+  border: none;
+  background: #fff;
+}
+/* `````````````````````````` second poster  ```````````````````````````` */
+.second-poster {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.second-poster .sec-post-1 {
+  width: 25%;
+  padding: 20px 5px;
+  position: relative;
+}
+.sec-text-1,
+.sec-text-2 {
+  position: absolute;
+  top: 70px;
+  left: 60px;
+  color: #fff;
+}
+.second-poster .sec-post-1 img {
+  width: 100%;
+  height: 370px;
+  border-radius: 5px;
+}
+.second-poster .sec-post-2 {
+  width: 45%;
+  padding: 10px;
+  position: relative;
+}
+.second-poster .sec-post-2 .sub-post-1 {
+  width: 99%;
+  padding: 10px;
+}
+.second-poster .sec-post-2 .sub-post-1 img {
+  width: 100%;
+  border-radius: 5px;
+}
+.second-poster .sec-post-2 .sub-post-2 {
+  display: flex;
+}
+.second-poster .sec-post-2 .sub-post-2 .sub-1,
+.sub-2 {
+  padding: 5px 10px;
+  position: relative;
+}
+.second-poster .sec-post-2 .sub-post-2 div img {
+  width: 97%;
+  height: 170px;
+  border-radius: 5px;
+}
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ section ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+.section,
+.contact {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.section .section-card {
+  width: 50%;
+  padding: 10px;
+}
+.section .section-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+.section .section-card .section-text {
+  justify-content: center;
+  margin: 20px 40px;
+  width: 50%;
+  line-height: 25px;
+}
+/* contacts */
+.contact .contact-col {
+  width: 48%;
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid rgb(117, 145, 53);
+  border-radius: 7px;
+  align-items: center;
+  margin: 0px 5px;
+}
+.contact .contact-col .fa {
+  font-size: 100px;
+  background-color: 2px solid rgb(117, 145, 53);
+}
+
+/* footer */
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+  justify-content: space-between;
+  background-color: rgb(18, 58, 3);
+}
+footer .foot {
+  line-height: 30px;
+  padding: 20px;
+}
+footer .foot p {
+  font-size: 15px;
+  color: wheat;
+}
+footer .foot h2,
+h3 {
+  color: #fff;
+}
+.sub-footer {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
