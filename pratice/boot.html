@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .navbar {
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      }
+
+      .navbar-logo a {
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .navbar-links {
+        display: flex;
+        list-style: none;
+      }
+
+      .navbar-links li {
+        margin-right: 10px;
+      }
+
+      .navbar-links li a {
+        color: #333;
+        text-decoration: none;
+      }
+
+      .navbar-toggle {
+        display: none;
+      }
+
+      @media screen and (max-width: 768px) {
+        .navbar-links {
+          display: none;
+        }
+        .navbar-toggle {
+          display: block;
+          cursor: pointer;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .navbar-links.responsive {
+          display: flex;
+          flex-direction: column;
+        }
+        .navbar-links.responsive li {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="#">Logo</a>
+      </div>
+      <ul class="navbar-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="navbar-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </body>
+</html>
+<script>
+  $(".navbar-toggle").click(function () {
+    $(".navbar-links").toggleClass("responsive");
+  });
+</script>

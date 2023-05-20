@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* ul {
+        display: none;
+        background-color: black;
+        color: white;
+        list-style: none;
+        height: 300px;
+        transition: 2s;
+      } */
+      *{margin: 0;padding: 0;box-sizing: border-box;}
+      .cont{display: flex;flex-wrap: wrap;}
+      .col{width: 25%;padding: 10px;}
+      .card{background-color: red;height: 100px;}
+      @media(max-width:768px){.col{width: 50%;}}
+      @media(max-width:480px){.col{width: 100%;}}
+    </style>
+  </head>
+  <body>
+    <button>btn</button>
+    <div class="pos">
+      <!-- <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+      </ul>
+    </div> -->
+    <div class="cont">
+      <div class="col">
+        <div class="card">card</div>
+      </div>
+      <div class="col">
+        <div class="card">card</div>
+      </div>
+      <div class="col">
+        <div class="card">card</div>
+      </div>
+      <div class="col">
+        <div class="card">card</div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let btn = document.querySelector("button");
+  let x = document.querySelector("ul");
+  let toggle = true;
+  btn.addEventListener("click", () => {
+    if (toggle === true) {
+      x.style.display = "block";
+      toggle = false;
+    } else if (toggle === false) {
+      x.style.display = "none";
+
+      toggle = true;
+    }
+  });
+</script>
