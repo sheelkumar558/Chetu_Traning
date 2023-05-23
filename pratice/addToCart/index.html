@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      .container {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        margin: auto;
+      }
+      .container div {
+        width: 25%;
+      }
+      .container div img {
+        width: 300px;
+      }
+      .cartData {
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .cartData img {
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <button onclick="CartShowData()">Show Cart</button>
+    <div class="cartData"></div>
+  </body>
+</html>
+<script>
+  let container = document.querySelector(".container");
+  let cartData = document.querySelector(".cartData");
+  let data = [
+    {
+      id: 1,
+      image:
+        "https://cdn1.tripoto.com/media/filter/tst/img/1358540/Image/1560249767_mlex.jpg",
+      type: "PACKAGE",
+      title: "4 Days In Maldives",
+      location: "Maldives",
+      button: "4D-3N",
+      price: "₹ 32,000",
+      person: "/person",
+      quotes: "Get Quotes",
+      brand_logo:
+        "https://cdn1.tripoto.com/media/filter/mss/img/411197/UserPhoto/1552395968_oyo.jpg",
+      brand_name: "OYO Total Holidays",
+    },
+    {
+      id: 2,
+      image:
+        "https://cdn1.tripoto.com/media/filter/tst/img/1524784/Image/1567494998_andaman_app.jpg",
+      type: "PACKAGE",
+      title: "Explore Maldives",
+      location: "Maldives",
+      button: "4D-3N",
+      price: "₹ 28,500",
+      person: "/ person",
+      quotes: "Get Quotes",
+      brand_logo:
+        "https://cdn1.tripoto.com/media/filter/mss/img/1550627/UserPhoto/1557303075_0.png",
+      brand_name: "Destynasia Venture",
+    },
+    {
+      id: 3,
+      image:
+        "https://cdn1.tripoto.com/media/filter/tst/img/1524784/Image/1569824408_mauritius.jpg",
+      type: "PACKAGE",
+      title: "Magical Mauritius",
+      location: "Mauritius",
+      button: "Get Quotes",
+      price: "₹ 25,000",
+      person: "/person",
+      quotes: "Get Quotes",
+      brand_logo:
+        "https://cdn1.tripoto.com/media/filter/mss/img/1467829/UserPhoto/1568839915_tui_logo.jpg",
+      brand_name: "TUI India",
+    },
+    {
+      id: 4,
+      image:
+        "https://cdn1.tripoto.com/media/filter/tst/img/1358540/Image/1560249904_mauto.jpg",
+      type: "PACKAGE",
+      title: "Andaman Packages",
+
+      location: "Mauritius",
+      button: "5D-4N",
+      price: "₹ 18,000",
+      person: "onwards",
+      quotes: "Get Quotes",
+      brand_logo:
+        "https://cdn1.tripoto.com/media/filter/mss/img/1358539/UserPhoto/1553849222_logo.jpg",
+      brand_name: "Tripoto Verified Partner",
+    },
+    {
+      id: 5,
+      image:
+        "https://cdn1.tripoto.com/media/filter/tst/img/747480/Image/1556628527_bali.jpg",
+      type: "PACKAGE",
+      title: "Experience Mauritius",
+
+      location: "Bali",
+      button: "7D-6N",
+      price: "₹ 68,000",
+      person: "/person",
+      quotes: "Get Quotes",
+      brand_logo:
+        "https://cdn1.tripoto.com/media/filter/mss/img/411197/UserPhoto/1552395968_oyo.jpg",
+      brand_name: "OYO Total Holidays",
+    },
+    {
+      id: 6,
+      image:
+        "https://cdn1.tripoto.com/media/filter/tst/img/1358540/Image/1560249904_mauto.jpg",
+      type: "PACKAGE",
+      title: "7 Days In Mauritius",
+
+      location: "Mauritius",
+      button: "7D-6N",
+      price: "₹ 20,000",
+      person: "/person",
+      quotes: "Get Quotes",
+      brand_logo:
+        "https://cdn1.tripoto.com/media/filter/mss/img/411197/UserPhoto/1552395968_oyo.jpg",
+      brand_name: "OYO Total Holidays",
+    },
+    {
+      id: 7,
+      image:
+        "https://cdn1.tripoto.com/media/filter/tst/img/747480/Image/1556628527_bali.jpg",
+      type: "PACKAGE",
+      title: "Premium Pool Villa Special",
+
+      location: "Maldives",
+      button: "6D-5N",
+      price: "₹ 23,454",
+      person: "/person",
+      quotes: "Get Quotes",
+      brand_logo:
+        "https://cdn1.tripoto.com/media/filter/mss/img/411197/UserPhoto/1552395968_oyo.jpg",
+      brand_name: "OYO Total Holidays",
+    },
+    {
+      id: 8,
+      image:
+        "https://cdn1.tripoto.com/media/filter/tst/img/270755/Image/1560495127_honeymoon.jpg",
+      type: "PACKAGE",
+      title: "Honeymoon On Beaches And Desert.",
+
+      location: "Maldives",
+      button: "8D-8N",
+      price: "₹ 88,999",
+      person: "/person",
+      quotes: "Get Quotes",
+      brand_logo:
+        "https://cdn1.tripoto.com/media/filter/mss/img/1586489/UserPhoto/1559222611_logo.jpg",
+      brand_name: "IFLy Vacation PVT Ltd.",
+    },
+    {
+      id: 9,
+      image:
+        "https://cdn1.tripoto.com/media/filter/tst/img/1791424/Image/1587377760_3_20.jpg",
+      type: "PACKAGE",
+      title: "Exotic Maldives",
+
+      location: "Maldives",
+      button: "4D-3N",
+      price: "₹ 22,000",
+      person: "/person",
+      quotes: "Get Quotes",
+      brand_logo:
+        "https://cdn1.tripoto.com/media/filter/mss/img/1334305/UserPhoto/1557748206_untitled.png",
+      brand_name: "Explore More Holidays",
+    },
+  ];
+
+  showData(data);
+  let cartAddData = [];
+  function showData(data) {
+    container.innerHTML = "";
+    data.forEach((ele, i) => {
+      let div = document.createElement("div");
+      let imgDiv = document.createElement("div");
+      let textDiv = document.createElement("div");
+      let img = document.createElement("img");
+      img.src = ele.image;
+      let h2 = document.createElement("h2");
+      h2.textContent = ele.title;
+      let p = document.createElement("p");
+      p.textContent = ele.price;
+      let button = document.createElement("button");
+      button.textContent = "Add To Cart";
+      button.addEventListener("click", () => {
+        cartAddData.push(ele);
+        console.log(cartAddData);
+      });
+      imgDiv.append(img);
+      textDiv.append(h2, p, button);
+      div.append(imgDiv, textDiv);
+      container.append(div);
+    });
+  }
+  function CartShowData() {
+    cartData.innerHTML = "";
+    cartAddData.forEach((ele, i) => {
+      let div = document.createElement("div");
+      let imgDiv = document.createElement("div");
+      let textDiv = document.createElement("div");
+      let img = document.createElement("img");
+      img.src = ele.image;
+      let h2 = document.createElement("h2");
+      h2.textContent = ele.title;
+      let p = document.createElement("p");
+      p.textContent = ele.price;
+      let button = document.createElement("button");
+      button.textContent = "Remove";
+      button.addEventListener("click", () => {
+        removeCart(i);
+      });
+      imgDiv.append(img);
+      textDiv.append(h2, p, button);
+      div.append(imgDiv, textDiv);
+      cartData.append(div);
+    });
+  }
+
+  function removeCart(i) {
+    cartAddData.splice(i, 1);
+    console.log(cartAddData);
+    CartShowData(cartAddData);
+  }
+</script>
