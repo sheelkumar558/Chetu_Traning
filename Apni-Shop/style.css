@@ -1,0 +1,525 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 20px;
+}
+.menu{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 15px;
+    border-bottom: 1px solid;
+}
+.left{
+    font-size: 15px;
+    font-weight: lighter;
+    letter-spacing: normal;
+}
+.left a{
+    text-decoration: none;
+    color: rgb(247, 8, 8);
+    font-size: 20px;
+}
+.right{
+    padding-right: 25px;
+}
+.right i{
+    font-size: 23px;
+    padding-right: 15px;
+    color: rgb(247, 8, 8);
+}
+
+.menu2{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.menu2 .left{
+    font-size: 17px;
+    font-weight: lighter;
+}
+
+.menu2 .left,.menu2 .center,.menu2 .right{
+    flex-basis: 30%;
+    margin: auto;
+}
+.menu2 .left i{
+    margin-left: 15px;
+    padding: 8px;
+    color: rgb(247, 8, 8);
+
+}
+.menu2 .center span{
+    color: rgb(247, 8, 8);
+}
+.menu2 .center{
+    text-align: center;
+    line-height: 15px;
+}
+
+.menu3{
+    height: 90px;
+    width: 100%;
+    line-height: 40px;
+}
+
+.menu3 ul{
+    list-style: none;
+    text-align: center;
+}
+
+.menu3 ul li{
+    display: inline-block;
+    margin: 50px;
+    color: black;
+}
+.menu3 ul li a{
+    color: black;
+    text-decoration: none;
+}
+.menu3 ul li a:hover{
+    color: rgb(247, 8, 8);
+}
+
+.menu3 ul li i{
+    color: rgb(247, 8, 8);
+    margin: 5px;
+    text-decoration: none;
+}
+section{
+    height: 60vh;
+    width: 100%;
+}
+.img{
+    background: url(/shop.jpg);
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: top;
+    padding-top: 300px;
+    margin-top: 200px;
+}
+.container-1 h1{
+    color: rgb(247, 8, 8);
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+} 
+.container-1 h1 span{
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+    color: black;
+}
+
+.container-1 p{
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    color: black;
+}
+
+.product{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product .products{
+    flex-basis: 30%;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-top: 250px;
+    padding: 10px 20px;
+    margin-left: 20px;
+}
+.product .products img:hover{
+    width: 90%;
+    color: rgb(247, 8, 8);
+}
+.product .products img{
+    height: 260px;
+    width: 260px;
+}
+
+.product .products button{
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: normal;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+.products h1{
+    font-size: 30px;
+    font-weight: normal;
+    color: rgb(247, 8, 8);
+    text-align: center;
+    letter-spacing: normal;
+}
+.products h2{
+    font-size: 30px;
+    font-weight: lighter;
+    color: rgb(247, 8, 8);
+    text-align: center;
+    letter-spacing: normal;
+}
+.products span{
+    padding-left: 55px;
+}
+
+.products span i{
+    color: gold;
+    font-size: 20px;
+   text-align: center;
+    align-items: center;
+}
+.img1{
+    background: url(/ban1.jpg);
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    padding-top: 300px;
+    margin-top: 300px;
+    background-position: top;
+}
+.img1 button{
+    background-color: black;
+    color: white;
+    font-size: 60px;
+    font-weight: lighter;
+    letter-spacing: normal;
+    margin-left: 410px;
+    margin-top: 250px;
+}
+.banner2{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner2 .banners{
+    flex-basis: 30%;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-top: 250px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    position: relative;
+}
+.banner2 .banners img:hover{
+    width: 80%;
+}
+.banners::before{
+    content: "20% Off";
+    height: 30px;
+    width: 25%;
+    background-color: rgb(247, 8, 8);
+    color: white;
+    top: 0px;
+    left: 0px;
+    padding-left: 10px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+.banner2 .banners img{
+    height: 260px;
+    width: 260px;
+}
+.banner2 .banners i{
+    color: gold;
+    font-size: 20px;
+   text-align: center;
+    align-items: center;
+}
+.banner2 .banners button{
+    background-color: black;
+    color: white;
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: normal;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+.banner2 .banners h1{
+    font-size: 30px;
+    font-weight: normal;
+    color: rgb(247, 8, 8);
+    text-align: center;
+    letter-spacing: normal;
+}
+.banner2 .banners h2{
+    font-size: 30px;
+    font-weight: lighter;
+    color: rgb(247, 8, 8);
+    text-align: center;
+    letter-spacing: normal;
+}
+.banners span{
+    padding-left: 55px;
+}
+.img3{
+    background: url(/ban2.jpg);
+    height: 60vh;
+    width: 100%;
+    background-size: cover;
+    padding-top: 300px;
+    margin-top: 300px;
+    background-position: top;
+}
+.tagline h1{
+    color: black;
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+}
+.tagline p{
+    font-size: 20px;
+    font-weight: lighter;
+    text-align: center;
+    color: black;
+}
+.tagline h1 span{
+    font-size: 40px;
+    font-weight: lighter;
+    text-align: center;
+    color: rgb(247, 8, 8);
+}
+.last{
+    height: 90px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+.last .last-left{
+    height: 90px;
+    width: 50%;  
+}
+.last .last-left h4{
+    font-size: 18px;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+.last .last-left input{
+    border: 1px solid rgb(247, 8, 8);
+    border-radius: 30px;
+}
+.last .last-left button{
+    border-radius: 30px;
+    background-color: rgb(247, 8, 8);
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+}
+.last .last-left button:hover{
+    background-color: white;
+    color: rgb(247, 8, 8);
+}
+.last .last-left i{
+    font-size: 18px;
+    color: rgb(247, 8, 8);
+}
+.last .last-right{
+    height: 80px;
+    width: 50%;
+    color: white;    
+}
+.last .last-right h6{
+ font-size: 18px;
+ font-weight: lighter;
+ margin-bottom: 9px;
+ margin-top: 5px;
+ text-align: center;
+
+}
+.last .last-right h5{
+font-size: 18px;
+ font-weight: lighter;
+text-align: center;
+}
+.last .last-right i{
+    font-size: 18px;
+    color: rgb(247, 8, 8);
+    margin-left: 20px;
+    padding-left: 20px;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 769px){
+    .menu{
+font-size: 8px;
+padding: 0px 5px;
+z-index: 92;
+margin-top: 10px;
+}
+.left{
+    font-size: 12px;
+    font-weight: lighter;
+    letter-spacing: normal;
+    width: 50%;
+    z-index: 93;
+}
+.left a{
+    text-decoration: none;
+    color: rgb(247, 8, 8);
+    font-size: 12px;
+}
+.right i{
+    font-size: 12px;
+    margin-top: 5px;
+}
+.menu2 .left{
+    font-size: 15px;
+}
+.menu2 .center span{
+    margin-left: 2px;
+}
+.menu2 .center{
+    font-size: 15px;
+}
+
+.menu3 ul{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.menu3 ul li{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    margin: 10px 10px;
+}
+.menu3 ul li i{
+    color: rgb(247, 8, 8);
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: right;
+    text-align: center;
+    text-decoration: none;
+}
+.img{
+    background-attachment: scroll;
+}
+
+
+.product{
+    display: inline-block;
+    text-align: center;
+}
+.product .products{
+    flex-basis: 100%;
+    margin-top: 60px;
+    padding: 5px 10px;
+    margin-left: 20px;
+}
+
+.product .products button{
+    font-size: 40px;
+    margin-right: 50px;
+}
+
+.products span i{
+    color: gold;
+    font-size: 20px;
+   text-align: center;
+    align-items: center;
+}
+.products span{
+    margin-right: 55px;
+}
+.img1{
+    padding-top: 150px;
+    margin-top: 150px;
+}
+.img1 button{
+    font-size: 50px;
+    margin: 100px 80px;
+}
+.banner2{
+    display: inline-block;
+    text-align: center;
+}
+.banner2 .banners{
+    flex-basis: 100%;
+    margin-top: 80px;
+    padding: 10px 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.banners::before{
+    height: 50px;
+    width: 20%;
+    padding-left: 5px;
+}
+.banner2 .banners span{
+    margin-right: 50px;
+}
+.banner2 .banners button{
+    font-size: 30px;
+    margin-right: 50px;
+}
+.last .last-left h4{
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+
+.last .last-left input{
+    border: 1px solid rgb(247, 8, 8);
+    border-radius: 30px;
+}
+.last .last-left button{
+    border-radius: 30px;
+    background-color: rgb(247, 8, 8);
+    color: white;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 7px;
+    
+}
+
+
+.last .last-right{
+    height: 80px;
+    width: 50%;
+    color: white;    
+}
+.last .last-right h6{
+ font-size: 12px;
+}
+.last .last-right h5{
+font-size: 12px;
+}
+
+
+}

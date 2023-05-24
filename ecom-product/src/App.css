@@ -1,0 +1,528 @@
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 2vw;
+  opacity: 0.7;
+}
+
+li:hover {
+  opacity: 1;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.navBar {
+  position: absolute;
+  display: flex;
+  top: 0;
+  padding: 3vh 10vw;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+nav[role=navigation] {
+  display: none;
+}
+
+.nav-1 {
+  width: 60vw;
+  display: flex;
+  align-items: center;
+}
+
+.nav-2 {
+  display: flex;
+  align-items: center;
+}
+
+.cartIcn {
+  cursor: pointer;
+  margin-right: 4vw;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.cartIcn:hover {
+  background-color: rgb(236, 236, 236);
+}
+
+.cartSize-notif {
+  position: absolute;
+  color: white;
+  background-color: rgb(255, 115, 0);
+  padding: 1px 5px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 10px;
+  top: 23px;
+  right: 17vw;
+  z-index: 0;
+}
+
+.avatarImg {
+  cursor: pointer;
+  width: 50px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.avatarImg:hover {
+  box-shadow: 0 0 0 2px orange;
+}
+
+.main-product-content {
+  margin: 20vh 10vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-images {
+  grid-column-start: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.previous,
+.next {
+  display: none;
+}
+
+.productImg {
+  width: 450px;
+  border-radius: 15px;
+}
+
+.thumbnails {
+  margin-top: 20px;
+}
+
+.productThb {
+  width: 80px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 0 1vw;
+}
+
+.productThb-active {
+  opacity: 0.5;
+  border: solid rgba(255, 115, 0, 1) 4px;
+}
+
+.main-description {
+  grid-column-start: 2;
+}
+
+.main-description p {
+  line-height: 32px;
+}
+
+.product-brand {
+  color: rgb(255, 153, 0);
+  margin-bottom: 10px;
+}
+
+.prices {
+  display: flex;
+}
+
+.promo-coupon {
+  color: orange;
+  background-color: rgb(255, 239, 210);
+  width: 40px;
+  border-radius: 5px;
+  padding: 5px 5px 7px 10px;
+  margin-left: 20px;
+}
+
+.old-price {
+  opacity: 0.3;
+  text-decoration: line-through;
+  flex-grow: 1;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+
+.product-buy {
+  display: flex;
+  align-items: center;
+}
+
+.prices {
+  flex-direction: row;
+}
+
+.product-qtt {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 7vh;
+  background-color: rgb(240, 241, 241);
+  border-radius: 5px;
+  margin-right: 2vw;
+}
+
+.product-qtt img {
+  cursor: pointer;
+}
+
+.qttMinus,
+.qttPlus {
+  width: 4vw;
+  height: 4vh;
+  cursor: pointer;
+  background-position: 1.75vw !important;
+}
+
+.qttMinus {
+  background: url(./images/icon-minus.svg) no-repeat;
+}
+
+.qttPlus {
+  background: url(./images/icon-plus.svg) no-repeat;
+}
+
+.product-qtt img:first-child {
+  margin-right: 2vw;
+}
+
+.product-qtt img:last-child {
+  margin-left: 2vw;
+}
+
+.addToCart-button {
+  color: white;
+  background: url("./images/icon-cart.svg") no-repeat;
+  background-position: 5vw;
+  background-color: rgb(255, 115, 0);
+  padding: 2vh 6vw 2vh 7vw;
+  border-radius: 5px;
+  box-shadow: 0px 15px 40px -10px rgb(255, 115, 0);
+  transition: 0.3s;
+}
+
+.addToCart-button:hover {
+  background-color: rgb(219, 106, 1);
+}
+
+@media only screen and (max-width: 1000px) {
+  .product-buy {
+    flex-direction: column;
+  }
+
+  .product-qtt {
+    margin-bottom: 2vh;
+  }
+
+  .productImg {
+    width: 90%;
+  }
+
+  .addToCart-button {
+    background-position: 3vw;
+  }
+}
+
+/* Hamburger menu */
+@media only screen and (max-width: 860px) {
+  .logoIcn {
+    margin-left: 50px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  nav[role=navigation] {
+    display: block;
+  }
+
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 5px;
+    left: 2vw !important;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    /* color: tomato; */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+  }
+
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+
+    -webkit-touch-callout: none;
+  }
+
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+      opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 300px;
+    height: 100vh;
+    margin: -100px 0 0 400px;
+    padding: 50px;
+    padding-top: 125px;
+
+
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(-1500%, 0);
+
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+
+  #menu li {
+    padding: 10px 0;
+    font-size: 22px;
+  }
+
+  /*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked~ul {
+    transform: translate(-150%, 0);
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 700px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .previous,
+  .next {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: white !important;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 25px !important;
+    position: absolute;
+    top: 40vh;
+    cursor: pointer;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+  }
+
+  .previous:hover,
+  .next:hover {
+    background-color: rgb(255, 241, 230) !important;
+    transform: translateY(-5px);
+  }
+
+  .previous {
+    background: url(./images/icon-previous.svg) no-repeat;
+    left: 0;
+  }
+
+  .next {
+    background: url(./images/icon-next.svg) no-repeat;
+    right: 0;
+  }
+
+  .avatarImg {
+    cursor: pointer;
+    width: 6vw;
+  }
+
+  .main-product-content {
+    /* margin: 20vh 10vw; */
+    margin: 20vh 0 0vh 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: fit-content 1fr;
+  }
+
+  .main-images {
+    grid-row-start: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .productImg {
+    width: 100vw;
+    border-radius: 0;
+  }
+
+  .thumbnails {
+    display: none;
+  }
+
+  .main-description {
+    /* margin: 0 10vw; */
+    grid-column-start: 1;
+    grid-row-start: 2;
+    padding: 5vw;
+  }
+
+  .old-price {
+    flex-grow: 0;
+  }
+
+  .product-buy {
+    padding: 0;
+    width: 100%;
+  }
+
+  .qttMinus,
+  .qttPlus {
+    width: 40vw;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: 20vw !important;
+  }
+
+  .product-qtt {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .addToCart-button {
+    width: 100%;
+    padding: 0;
+    padding: 2vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: 30vw;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .addToCart-button {
+    background-position: 25vw;
+  }
+}
