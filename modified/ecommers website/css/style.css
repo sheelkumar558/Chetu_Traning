@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Tinos:ital,wght@1,700&display=swap');
+@import url(./variables.css);
+
+*,
+*::before,
+*::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.bgcolor {
+    background: rgba(128, 128, 128, 0.06);
+}
+
+h2 {
+    font-family: 'Tinos', serif;
+    color: var(--icons-color);
+}
+
+/* ----------- Top nav start ---------------- */
+.top-navbar {
+    width: 100%;
+    height: auto;
+    background: var(--navbarbg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.top-icons {
+    margin-left: 10px;
+}
+
+.top-icons i {
+    font-size: var(--font-size20);
+    color: var(--icons-color);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.other-links {
+    margin-right: 10px;
+}
+
+.other-links i {
+    color: var(--icons-color);
+    font-size: var(--font-size20);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#btn-login {
+    width: 100px;
+    border: 2px solid #1c1c50;
+    color: var(--icons-color);
+    font-weight: var(--font-bold);
+    border-radius: 5px;
+    height: auto !important;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+#btn-login a {
+    text-decoration: none;
+    color: var(--icons-color);
+    transition: .5s ease;
+}
+
+#btn-login:hover {
+    background: var(--icons-color);
+}
+
+#btn-login:hover a {
+    color: var(--white-color);
+}
+
+#btn-signup {
+    width: 100px;
+    border: 2px solid #1c1c50;
+    color: var(--icons-color);
+    font-weight: var(--font-bold);
+    border-radius: 5px;
+    height: auto !important;
+    transition: .5s ease;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#btn-signup a {
+    text-decoration: none;
+    color: var(--icons-color);
+    transition: .5s ease;
+}
+
+#btn-signup:hover {
+    background: var(--icons-color);
+}
+
+#btn-signup:hover a {
+    color: var(--white-color);
+}
+
+/* ----------- Top nav End ---------------- */
+
+
+
+/* -----------Navbar Start ---------------- */
+#navbar {
+    background-color: var(--icons-color);
+}
+
+#navbar .nav-link {
+    color: var(--white-color);
+    font-weight: var(--font-weight);
+    position: relative;
+    display: inline-block;
+}
+
+#navbar .nav-link::before {
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    right: 0;
+    width: 0%;
+    height: 3%;
+    border-bottom: 2px solid #fff;
+    transition: .3s linear;
+}
+
+#navbar .nav-link:hover::before {
+    width: 80%;
+    left: 10%;
+}
+
+#navbar input[type="search"]::placeholder {
+    color: var(--icons-color);
+    font-weight: var(--font-weight);
+}
+
+#navbar input[type="search"]:hover,
+#navbar input[type="search"]:focus {
+    outline: unset;
+    box-shadow: none;
+}
+
+/* -----------Navbar End ---------------- */
+
+
+
+
+/* ------------ Banner Section Start ------------ */
+#home,
+#home .container {
+    width: 100%;
+    min-height: 80vh;
+}
+
+.home-section-left h1 {
+    font-family: 'Tinos', serif;
+    font-size: 3rem;
+    color: var(--icons-color);
+    line-height: 4rem;
+}
+
+.home-section-left p {
+    color: rgb(112, 111, 111);
+    line-height: 28px;
+    font-size: 18px;
+}
+
+#custom-btn {
+    border: 2px solid #1c1c50;
+    color: var(--icons-color);
+    font-weight: var(--font-bold);
+    background-color: var(--white-color);
+    transition: .5s ease;
+    cursor: pointer;
+    padding: 7px 28px;
+}
+
+#custom-btn:hover {
+    background-color: var(--icons-color);
+    color: var(--white-color);
+}
+
+/* ------------ Banner Section End ------------ */
+
+
+
+
+/* -------------Card Section Start -------------- */
+#top-cards .card-section .card-section-img {
+    background: rgba(128, 128, 128, 0.11);
+}
+
+#top-cards .card-section {
+    transition: .4s linear;
+    overflow: hidden;
+}
+
+#top-cards .card-section img {
+    transition: .4s linear;
+}
+
+#top-cards .card-section:hover img {
+    transform: perspective(800px) translateZ(30px);
+}
+
+#top-cards .card-section .card-section-img .carimg3 {
+    height: 355px !important;
+}
+
+.text-custom {
+    max-width: 90%;
+}
+
+.stars {
+    color: var(--star-color);
+}
+
+/* -------------Card Section End -------------- */
+
+
+
+/* ------------- Offer Section Start ------------- */
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../image/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ------------- Offer Section  End------------- */
+
+
+/* ------------- Footer Section Start---------------- */
+footer {
+    background-color: var(--icons-color);
+    color: var(--white-color);
+}
+
+footer .footer-top p {
+    font-size: 15px;
+}
+
+.icons a.ri-instagram-fill,
+.icons a.ri-linkedin-box-fill,
+.icons a.ri-facebook-box-fill,
+.icons a.ri-youtube-fill {
+    background-color: #a79e9e;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500 !important;
+}
+
+.links a:hover {
+    color: var(--star-color) !important;
+}
+
+.shoping {
+    cursor: pointer;
+}
+
+/* ------------- Footer Section End---------------- */
+
+
+
+/* ------------ products services Start -------------- */
+#offer .offer-icon {
+    font-size: 100px;
+    color: var(--icons-color);
+    line-height: 120px;
+}
+
+#offer .offer-content h5 {
+    font-weight: var(--font-weight);
+}
+
+#offer .offer-content p {
+    font-weight: 500;
+}
+
+/* ------------ products services End -------------- */
+
+.modal-open .modal {
+    display: flex !important;
+    align-items: center !important;
+}
+
+.modal-dialog {
+    flex-grow: 1;
+}
+
+#notifier {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+#notifier.success {
+    border: 1px solid var(--icons-color) ;
+    border-radius: 5px;
+    background-color: var(--icons-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#notifier.danger {
+    border: 1px solid tomato ;
+    border-radius: 5px;
+    background-color: rgb(254, 186, 174);
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}

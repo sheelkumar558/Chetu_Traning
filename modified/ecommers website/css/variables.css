@@ -1,0 +1,13 @@
+:root{
+    /* colors */
+    --navbarbg-color:#a9a9a926;
+    --icons-color: #1c1c50;
+    --white-color: white;
+    --star-color:#ff9100;
+    /* fonts*/
+    --font-weight:600;
+    --font-bold:bold;
+    --font-size15:15px;
+    --font-size10:10px;
+    --font-size20:20px;
+}
